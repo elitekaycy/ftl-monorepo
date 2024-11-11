@@ -1,0 +1,47 @@
+@use 'partials/sidebarVar';
+
+.sidebar-div {
+  width: sidebarVar.$collapsed-sidebar-width;
+  background-color: sidebarVar.$sidebar-bg-color;
+  height: 100vh;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+
+  ul {
+    width: 100%;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+
+    li {
+      padding: sidebarVar.$collapsed-sidebar-item-padding; 
+      font-size: sidebarVar.$collapsed-sidebar-item-font-size;
+      font-weight: sidebarVar.$sidebar-item-font-weight;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out, width 0.2s ease-in-out;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.active {
+        background-color: sidebarVar.$sidebar-active-bg-color;
+        color: sidebarVar.$sidebar-active-text-color;
+      }
+
+      span {
+        color: sidebarVar.$sidebar-text-color;
+        display: none;
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+

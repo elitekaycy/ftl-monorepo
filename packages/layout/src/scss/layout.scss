@@ -1,0 +1,25 @@
+@use 'partials/layoutVar';
+@use "../../../sidebar/src/scss/partials/sidebarVar";
+
+
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100%;
+    background-color: blue;
+  }
+
+  .sidebar-wrapper {
+    flex-basis: sidebarVar.$sidebar-width;
+    background-color: layoutVar.$layout-container-color;
+  }
+
+ .main-content {
+    flex-basis: calc(100% - #{sidebarVar.$sidebar-width});
+    padding: 20px;
+  }
+
+
+

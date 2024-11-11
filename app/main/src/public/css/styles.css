@@ -1,0 +1,81 @@
+.sidebar-div {
+  width: 60px;
+  background-color: #2e3440;
+  height: 100vh;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.sidebar-div ul {
+  width: 100%;
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+.sidebar-div ul li {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, width 0.2s ease-in-out;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar-div ul li.active {
+  background-color: #4c566a;
+  color: #eceff4;
+}
+.sidebar-div ul li span {
+  color: #d8dee9;
+  display: none;
+}
+.sidebar-div ul li img {
+  width: 20px;
+  height: 20px;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100%;
+  background-color: blue;
+}
+
+.sidebar-wrapper {
+  flex-basis: 250px;
+  background-color: #222222;
+}
+
+.main-content {
+  flex-basis: calc(100% - 250px);
+  padding: 20px;
+}
+
+body {
+  margin: 0;
+}
+
+.body {
+  display: flex;
+  flex-direction: row; /* Ensures child elements are placed side-by-side */
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #F9F9FF;
+}
+
+/*# sourceMappingURL=styles.css.map */

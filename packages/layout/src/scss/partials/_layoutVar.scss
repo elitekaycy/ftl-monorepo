@@ -1,0 +1,9 @@
+@use "../../../../sidebar/src/scss/partials/sidebarVar";
+
+$layout-max-width: 1200px;
+sidebarVar.$sidebar-width: 250px;
+sidebarVar.$sidebar-bg-color: #f0f0f0;
+$layout-padding: 20px;
+$header-bg-color: #333;
+$header-text-color: #fff;
+$layout-container-color: #222222;

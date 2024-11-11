@@ -4,9 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean:css": "rm -rf app/main/src/public/css/*",
+    "build:scss": "pnpm run clean:css && sass app/main/src/sass/styles.scss app/main/src/public/css/styles.css",
+    "watch:scss": "sass --watch app/main/src/sass:app/main/src/public/css/",
+    "serve": "cd app/server/engine && ./mvnw spring-boot:run",
+    "build:dev": "concurrently \"pnpm run watch:scss\" \"pnpm run serve\""
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "engines": {
+    "node": ">=21.7.2"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
 }
